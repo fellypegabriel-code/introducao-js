@@ -1,10 +1,13 @@
-
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+
+/* =========================================================
+   VARIÁVEIS
+   ========================================================= */
 
 :root {
     --fundo: #f4f7fb;
@@ -12,13 +15,21 @@
     --texto: #1e293b;
     --texto-secundario: #64748b;
     --borda: #e2e8f0;
+
     --primaria: #6c63ff;
     --primaria-hover: #554ce0;
+
     --amarelo: #f7df1e;
     --escuro: #111827;
+
     --sucesso: #16a34a;
     --erro: #dc2626;
 }
+
+
+/* =========================================================
+   HTML E BODY
+   ========================================================= */
 
 html {
     scroll-behavior: smooth;
@@ -29,7 +40,7 @@ body {
     background: var(--fundo);
     color: var(--texto);
     line-height: 1.6;
-    transition: 0.3s;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .container {
@@ -38,10 +49,18 @@ body {
 }
 
 
+/* =========================================================
+   TOPO
+   ========================================================= */
 
 .topo {
     background:
-        linear-gradient(135deg, rgba(108, 99, 255, 0.96), rgba(66, 56, 180, 0.96));
+        linear-gradient(
+            135deg,
+            rgba(108, 99, 255, 0.96),
+            rgba(66, 56, 180, 0.96)
+        );
+
     color: white;
     padding: 70px 0;
 }
@@ -80,14 +99,20 @@ body {
 .topo-badge {
     min-width: 150px;
     height: 150px;
+
     background: var(--amarelo);
     color: #111;
+
     display: grid;
     place-items: center;
+
     font-weight: bold;
     font-size: 4rem;
+
     border-radius: 30px;
+
     box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+
     transform: rotate(5deg);
 }
 
@@ -99,27 +124,37 @@ body {
 .menu {
     background: white;
     border-bottom: 1px solid var(--borda);
+
     position: sticky;
     top: 0;
     z-index: 100;
+
+    transition: background-color 0.3s;
 }
 
 .menu-links {
     display: flex;
     align-items: center;
     gap: 8px;
+
     overflow-x: auto;
+
     padding: 12px 0;
 }
 
 .menu a {
     text-decoration: none;
     color: var(--texto-secundario);
+
     font-size: 0.9rem;
     font-weight: bold;
+
     white-space: nowrap;
+
     padding: 8px 12px;
     border-radius: 8px;
+
+    transition: 0.2s;
 }
 
 .menu a:hover {
@@ -128,6 +163,9 @@ body {
 }
 
 
+/* =========================================================
+   SEÇÕES
+   ========================================================= */
 
 .secao {
     padding: 70px 0 10px;
@@ -138,17 +176,22 @@ body {
     display: flex;
     align-items: center;
     gap: 18px;
+
     margin-bottom: 28px;
 }
 
 .secao-titulo > span {
     width: 48px;
     height: 48px;
+
     border-radius: 14px;
+
     background: var(--primaria);
     color: white;
+
     display: grid;
     place-items: center;
+
     font-weight: bold;
 }
 
@@ -161,6 +204,10 @@ body {
 }
 
 
+/* =========================================================
+   GRID
+   ========================================================= */
+
 .grid {
     display: grid;
     gap: 22px;
@@ -170,12 +217,26 @@ body {
     grid-template-columns: repeat(3, 1fr);
 }
 
+
+/* =========================================================
+   CARDS
+   ========================================================= */
+
 .card {
     background: var(--card);
+
     border: 1px solid var(--borda);
     border-radius: 18px;
+
     padding: 28px;
-    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
+
+    box-shadow:
+        0 10px 30px rgba(15, 23, 42, 0.05);
+
+    transition:
+        background-color 0.3s,
+        border-color 0.3s,
+        color 0.3s;
 }
 
 .tecnologia {
@@ -185,12 +246,17 @@ body {
 .tecnologia .icone {
     width: 55px;
     height: 55px;
+
     border-radius: 14px;
+
     display: grid;
     place-items: center;
+
     background: #eef2ff;
     color: var(--primaria);
+
     font-weight: bold;
+
     margin-bottom: 18px;
 }
 
@@ -212,20 +278,33 @@ body {
     color: #111;
 }
 
+
+/* =========================================================
+   EXPLICAÇÃO
+   ========================================================= */
+
 .caixa-explicacao {
     margin-top: 22px;
+
     padding: 18px 22px;
+
     border-left: 4px solid var(--primaria);
+
     background: #eeecff;
+
     border-radius: 8px;
 }
 
 
+/* =========================================================
+   EXEMPLOS
+   ========================================================= */
 
 .exemplo {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
     gap: 30px;
 }
 
@@ -236,7 +315,9 @@ body {
 .exemplo-info .mini-tag {
     color: var(--primaria);
     background: #eeecff;
+
     border: none;
+
     margin-bottom: 14px;
 }
 
@@ -249,6 +330,11 @@ body {
     color: var(--texto-secundario);
 }
 
+
+/* =========================================================
+   BOTÕES
+   ========================================================= */
+
 .acoes {
     display: flex;
     gap: 10px;
@@ -259,28 +345,35 @@ body {
     justify-content: center;
 }
 
-
-
 .btn {
     border: 1px solid var(--borda);
+
     background: white;
     color: var(--texto);
+
     padding: 11px 18px;
+
     border-radius: 10px;
+
     font-size: 0.95rem;
     font-weight: bold;
+
     cursor: pointer;
+
     transition: 0.2s;
 }
 
 .btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+
+    box-shadow:
+        0 8px 18px rgba(0, 0, 0, 0.08);
 }
 
 .btn-principal {
     background: var(--primaria);
     color: white;
+
     border-color: var(--primaria);
 }
 
@@ -294,19 +387,27 @@ body {
 
 
 /* =========================================================
-   EXEMPLO DE CORES
+   CAIXA DE CORES
    ========================================================= */
 
 .caixa-cor {
     min-height: 140px;
+
     border-radius: 16px;
+
     background: #e2e8f0;
+
     display: grid;
     place-items: center;
+
     font-size: 1.2rem;
     font-weight: bold;
+
     flex: 1;
-    transition: 0.3s;
+
+    transition:
+        background-color 0.3s,
+        color 0.3s;
 }
 
 
@@ -316,14 +417,21 @@ body {
 
 .mensagem-secreta {
     flex: 1;
+
     padding: 22px;
+
     border-radius: 14px;
+
     background: #dcfce7;
     color: #166534;
+
     font-weight: bold;
 }
 
 
+/* =========================================================
+   CONTADOR
+   ========================================================= */
 
 .contador-card {
     text-align: center;
@@ -331,20 +439,29 @@ body {
 
 .contador-label {
     color: var(--texto-secundario);
+
     text-transform: uppercase;
+
     font-size: 0.8rem;
     font-weight: bold;
+
     letter-spacing: 0.1em;
 }
 
 .contador-numero {
     font-size: 5rem;
+
     font-weight: bold;
+
     color: var(--primaria);
+
     margin: 15px 0 22px;
 }
 
 
+/* =========================================================
+   FORMULÁRIOS
+   ========================================================= */
 
 .formulario-card,
 .calculadora {
@@ -354,7 +471,9 @@ body {
 .campo {
     display: flex;
     flex-direction: column;
+
     gap: 7px;
+
     margin-bottom: 18px;
 }
 
@@ -364,35 +483,76 @@ body {
 
 input {
     width: 100%;
+
     padding: 13px 15px;
+
     border: 1px solid var(--borda);
+
     border-radius: 10px;
+
     outline: none;
+
     font-size: 1rem;
+
     background: white;
+    color: var(--texto);
+
+    transition: 0.2s;
 }
 
 input:focus {
     border-color: var(--primaria);
-    box-shadow: 0 0 0 3px rgba(108, 99, 255, 0.12);
+
+    box-shadow:
+        0 0 0 3px rgba(108, 99, 255, 0.12);
 }
+
+
+/* =========================================================
+   RESULTADOS
+   ========================================================= */
 
 .resultado {
     margin-top: 20px;
+
     padding: 16px;
+
     border-radius: 10px;
+
     background: #f8fafc;
+
     border: 1px dashed #cbd5e1;
 }
 
+.calculadora-resultado {
+    font-size: 1.15rem;
+}
+
+
+/* =========================================================
+   FORMULÁRIO EM LINHA
+   ========================================================= */
+
 .linha-formulario {
     display: grid;
+
     grid-template-columns: 1fr auto;
+
     gap: 10px;
 }
 
+.dois-campos {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+
+/* =========================================================
+   LISTA
+   ========================================================= */
+
 .lista {
     margin-top: 24px;
+
     padding-left: 22px;
 }
 
@@ -400,17 +560,18 @@ input:focus {
     margin-bottom: 8px;
 }
 
-.dois-campos {
-    grid-template-columns: repeat(2, 1fr);
-}
 
-.calculadora-resultado {
-    font-size: 1.15rem;
-}
+/* =========================================================
+   DESAFIO
+   ========================================================= */
+
 .desafio {
     margin: 70px 0;
+
     padding: 42px;
+
     border-radius: 22px;
+
     background: var(--escuro);
     color: white;
 }
@@ -418,17 +579,21 @@ input:focus {
 .desafio .mini-tag {
     background: var(--amarelo);
     color: #111;
+
     border: none;
+
     margin-bottom: 14px;
 }
 
 .desafio h2 {
     font-size: 2rem;
+
     margin-bottom: 10px;
 }
 
 .desafio p {
     color: #cbd5e1;
+
     margin-bottom: 20px;
 }
 
@@ -441,47 +606,107 @@ input:focus {
 }
 
 
+/* =========================================================
+   RODAPÉ
+   ========================================================= */
+
 .rodape {
     padding: 30px 0;
+
     text-align: center;
+
     color: var(--texto-secundario);
 }
 
 
-
+/* =========================================================
+   MODO ESCURO
+   ========================================================= */
 
 body.modo-escuro {
     --fundo: #0f172a;
     --card: #1e293b;
+
     --texto: #f8fafc;
     --texto-secundario: #cbd5e1;
+
     --borda: #334155;
 }
+
+
+/* Menu */
 
 body.modo-escuro .menu {
     background: #1e293b;
 }
 
-body.modo-escuro input {
-    background: #0f172a;
-    color: white;
+body.modo-escuro .menu a:hover {
+    background: #334155;
 }
 
-body.modo-escuro .resultado {
-    background: #0f172a;
-}
+
+/* Botões */
 
 body.modo-escuro .btn:not(.btn-principal) {
     background: #0f172a;
     color: white;
+
+    border-color: #475569;
 }
+
+
+/* Inputs */
+
+body.modo-escuro input {
+    background: #0f172a;
+    color: white;
+
+    border-color: #475569;
+}
+
+
+/* Resultados */
+
+body.modo-escuro .resultado {
+    background: #0f172a;
+    border-color: #475569;
+}
+
+
+/* Caixa de explicação */
 
 body.modo-escuro .caixa-explicacao {
     background: #292750;
 }
 
 
+/* Mini tag */
 
+body.modo-escuro .exemplo-info .mini-tag {
+    background: #292750;
+}
+
+
+/* Caixa de cor */
+
+body.modo-escuro .caixa-cor {
+    background: #334155;
+    color: white;
+}
+
+
+/* =========================================================
+   BOTÕES DO TEMA
+   ========================================================= */
+
+#btn-claro {
+    display: none;
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE
+   ========================================================= */
 
 @media (max-width: 800px) {
 
@@ -493,7 +718,9 @@ body.modo-escuro .caixa-explicacao {
     .topo-badge {
         width: 100px;
         min-width: 100px;
+
         height: 100px;
+
         font-size: 2.5rem;
     }
 
@@ -509,8 +736,8 @@ body.modo-escuro .caixa-explicacao {
     .dois-campos {
         grid-template-columns: 1fr;
     }
-
 }
+
 
 @media (max-width: 520px) {
 
@@ -530,4 +757,15 @@ body.modo-escuro .caixa-explicacao {
         padding: 28px;
     }
 
+    .topo {
+        padding: 50px 0;
+    }
+
+    .topo h1 {
+        font-size: 2.8rem;
+    }
+
+    .contador-numero {
+        font-size: 4rem;
+    }
 }
